@@ -1,6 +1,7 @@
 package ch.hszt.mdp;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
@@ -21,53 +22,53 @@ public class MdpJunitDemoTest {
 	public void isEmptyNull() {
 		assertTrue(junitDemo.isEmpty(null));
 	}
-	
+
 	@Test
 	public void isEmptyString() {
 		assertTrue(junitDemo.isEmpty(""));
 	}
-	
+
 	@Test
 	public void isEmptyNot() {
 		assertFalse(junitDemo.isEmpty("noo000t"));
 	}
-	
+
 	@Test
 	public void capatilzeSmall() {
 		assertEquals("Hello", junitDemo.capitalize("hello"));
 	}
-	
+
 	@Test
 	public void capatilzeCapsLock() {
 		assertEquals("Hello", junitDemo.capitalize("HELLO"));
 	}
-	
+
 	@Test
 	public void capatilzeNumber() {
 		assertEquals("123abc", junitDemo.capitalize("123ABC"));
 	}
-	
-	@Test(expected=NullPointerException.class)
+
+	@Test(expected = NullPointerException.class)
 	public void reverseNull() {
 		junitDemo.reverse(null);
 	}
-	
+
 	@Test
 	public void reverseText() {
 		assertEquals("zsH tseT", junitDemo.reverse("Test Hsz"));
 	}
-	
-    @Test
+
+	@Test
 	public void joinText() {
-		assertEquals("a b c", junitDemo.join("a","b","c"));
+		assertEquals("a b c", junitDemo.join("a", "b", "c"));
 	}
-    
-    @Test
+
+	@Test
 	public void joinEmpty() {
 		assertEquals("", junitDemo.join(""));
 	}
-    
-    @Test
+
+	@Test
 	public void joinNull() {
 		assertEquals(null, junitDemo.join());
 	}
