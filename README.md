@@ -1,4 +1,4 @@
-Java / Maven Kickstart Project
+MdpUebungSelbstaendigJunitTestsSchreiben
 ==============================
 
 Installation
